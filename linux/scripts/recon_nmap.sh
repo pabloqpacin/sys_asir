@@ -4,9 +4,9 @@ echo -e "\n----###############################################################--
 echo -e "#########~~~~~{     R3C0N NM4P v1.1  by @pabloqpacin    }~~~~~#########"
 echo -e "----###############################################################----\n"
 
-# Session addresses & target_list optional argument
-net=$(ip route | grep 'src' | awk '{print $1}' | head -n 1)
+# Session addresses & target_list argument
 ip=$(ip route get 1 | awk '{print $7}')
+net=$(ip route | grep 'src' | awk '{print $1}' | head -n 1)
 targets=("_gateway" "localhost" "scanme.nmap.org")
 
 echo -e "#  NOTE: Run './recon_nmap.sh target_list.txt' to add extra targets.  #\n"
@@ -146,6 +146,7 @@ function target_prompt {
 #     esac
 # }
 
+# MAIN LOOP
 while true
 do
     if [[ -e $log_temp ]]
@@ -193,26 +194,3 @@ do
 
 done
 
-
-###################### ~~~ ######################
-
-###########
-# function tee_out { tee -a $log_dir/$log_name.txt }
-# function sed_del { sed -i '/Script/d' $log }
-# TODO: send the flag as parameter to all functions; then the functions call another function to create the output if flag=1
-###########
-
-# Actions available:
-# Enter IP or menu items (1), (2), etc.
-# -- Now there will be a short list with the relevant IPs as per the existing interfaces
-# -- and the resulting addresses of previous scans.
-# -- That means a dedicated file should be created to store such "menu items"
-# --[[ this is no task for a mere bash script... feeling rusty... ]]
-# 
-# 
-
-#############
-
-# OTHER NOTES
-# current scans only report on 1000 ports then? and the rest?? why 8000 tho?
-# 
