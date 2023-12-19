@@ -61,7 +61,7 @@ Recommendations:
         <tr>
             <td rowspan=3>Databases</td>
             <td>Server/Client + IDEs</td>
-            <td>- Docker, Linux, Termux, Windows, WSL <br>- Neovim,  VSCode SQLTools</td>
+            <!-- <td>- Docker, Linux, Termux, Windows, WSL <br>- Neovim,  VSCode SQLTools</td> -->
             <td><a href="https://github.com/pabloqpacin/ASIR/blob/main/ASIR%2B/MySQL/MySQL-alt-CLI.md">MySQL-alt-CLI.md</a></td>
             <td>⚠️</td>
         </tr>
@@ -322,7 +322,7 @@ do
 
 done
 ```
-</details><br>
+</details>
 
 - As for **USAGE**, you may run the file as any other bash script:
 
@@ -341,7 +341,7 @@ $ .recon_nmap.sh target_list.txt
 
 - As for RESULTS, this is the actual contextual menu for `nmap` scans. It features network information, a targets shortlist, stealthy logging and coloured output if [grc](https://github.com/garabik/grc) is installed. 
 
-```txt
+```log
 #######################################################################
 # Scan log ................................. /tmp/recon/2023-10-04.txt
 # Active subnet ............................ 192.168.1.0/24
